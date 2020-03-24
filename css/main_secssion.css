@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+.slideshow {
+  height: 850px;
+  background: #000;
+  min-width: 960px;
+  overflow: hidden;
+  position: relative;
+}
+.slideshow_slides{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.slideshow_slides a{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+}
+/* 중앙에 배치시키기 위한 작업 배경색 : 이미지스프라이트 */
+
+.slideshow_nav a.prev{
+  position: absolute;
+  width: 71px;
+  height: 71px;
+  background: url(../img/sprites.png) no-repeat 0 -20px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%); /*원점을 정중앙으로 x 축이동*/
+  transform: translateY(-50%); /*원점을 정중앙으로 y 축이동*/
+  margin-left: -409px;
+  text-indent: -99999em;  /*글자없에버림*/
+}
+
+.slideshow_nav a.next{
+  position: absolute;
+  width: 71px;
+  height: 71px;
+  background: url(../img/sprites.png) no-repeat -81px -20px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%); /*원점을 정중앙으로 x 축이동*/
+  transform: translateY(-50%); /*원점을 정중앙으로 y 축이동*/
+  margin-left: 409px;
+  text-indent: -99999em;  /*글자없에버림*/
+}
+
+.slideshow_nav a.disabled{
+  display: none;
+}
+
+.slideshow .indicator{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 20px;
+  text-align: center;
+}
+/* 하얀색이미지 */
+.slideshow .indicator a{
+  width: 9px;
+  height: 9px;
+  background: url(../img/sprites.png) no-repeat -113px -4px;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+/* 검은색이미지 */
+.slideshow_indicator a.active{
+    background: url(../img/sprites.png) no-repeat -134px -4px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 10px;
+    text-indent: -9999em;
+}
